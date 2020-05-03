@@ -1,0 +1,1 @@
+module.exports = yearOfBirth => 2020 - yearOfBirth;

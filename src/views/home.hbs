@@ -1,18 +1,34 @@
 <h2>Challenge 1 - Display list of all names</h2>
-{{! Edit below this line}}
-
+{{#each users}}
+<li>{{this.name}}</li>
+{{/each}}
 
 <h2>Challenge 2 - Display list of all names in UPPERCASE</h2>
-{{! Edit below this line}}
+{{#each users}}
+<li>{{uppercase this.name}} </li>
+{{/each}}
 
 
 <h2>Challenge 3 - Display a list of users who are admins</h2>
-{{! Edit below this line}}
+{{#each users}}
+{{#if this.admin}}
+    <li>{{this.name}}</li>
+{{/if}}
+{{/each}}
 
 
 <h2>Challenge 4 - Display a list of users along with their age</h2>
-{{! Edit below this line}}
+{{#each users}}
+<li>{{this.name}} {{getage this.yearOfBirth}}</li>
+{{/each}}
 
 
 <h2>Challenge 5 - Display a list of users who are logged in or a label 'Log In' if the user is not logged in.</h2>
-{{! Edit below this line}}
+{{#each users}}
+{{#if this.loggedIn}}
+    <li>{{this.name}}</li>
+{{else}}
+    <li>Log in</li>
+{{/if}}
+
+{{/each}}
